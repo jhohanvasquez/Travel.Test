@@ -51,6 +51,7 @@ namespace Travel.Business.Services
                             case "0":
                                 Journey.Flight oFlightsItem1 = new Journey.Flight();
                                 Journey.Flight oFlightsItem2 = new Journey.Flight();
+
                                 var destinationFlights = commandResponse.Where(f => f.departureStation == itemOrigin.arrivalStation && f.arrivalStation == operationRequest.Destination).FirstOrDefault();
                                 
                                 if (destinationFlights != null)
