@@ -6,6 +6,7 @@ La empresa NEWSHORE AIR necesita una solución para poder conectar viajes a trav
 * Arquitectura en Capas
 * Swagger v1
 * Azure
+* Dapper
 
 Se debe modificar las conexiones tanto a BD como a Azure, para el registro del los y busquedas en bases de datos.
 
