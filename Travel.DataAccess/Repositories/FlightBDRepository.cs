@@ -24,7 +24,7 @@ namespace Travel.DataAccess.Repositories
         {
             try
             {
-                string sqlInsertBase = "INSERT INTO SafeCommands (Origin, Destination, Price, 'IdTypeRequest')";
+                string sqlInsertBase = "INSERT INTO TbJourney (Origin, Destination, Price, IdTypeRequest)";
                 sqlInsertBase += "VALUES('@Origin', '@Destination', '@Price', '@IdTypeRequest');";
 
                 sqlInsertBase = sqlInsertBase.Replace("@Origin", journey.Origin);
@@ -49,7 +49,7 @@ namespace Travel.DataAccess.Repositories
         {
             try
             {
-                string sqlInsertBase = "INSERT INTO SafeCommands (IdJourney, Origin, Destination, 'IdTypeRequest')";
+                string sqlInsertBase = "INSERT INTO TbFlights (IdJourney, Origin, Destination, IdTypeRequest)";
                 sqlInsertBase += "VALUES('@IdJourney', '@Origin', '@Destination', '@IdTypeRequest');";
 
                 sqlInsertBase = sqlInsertBase.Replace("@IdJourney", Convert.ToString(idJourney));
