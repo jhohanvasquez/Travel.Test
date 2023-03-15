@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Laboratory\\Travel\\Travel.DataAccess\\Travel.DataAccess.csproj": {}
+    "D:\\Labs\\Test.Solution\\Travel.Test\\Travel.DataAccess\\Travel.DataAccess.csproj": {}
   },
   "projects": {
-    "D:\\Laboratory\\Travel\\Travel.Business\\Travel.Business.csproj": {
+    "D:\\Labs\\Test.Solution\\Travel.Test\\Travel.Business\\Travel.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Laboratory\\Travel\\Travel.Business\\Travel.Business.csproj",
+        "projectUniqueName": "D:\\Labs\\Test.Solution\\Travel.Test\\Travel.Business\\Travel.Business.csproj",
         "projectName": "Travel.Business",
-        "projectPath": "D:\\Laboratory\\Travel\\Travel.Business\\Travel.Business.csproj",
+        "projectPath": "D:\\Labs\\Test.Solution\\Travel.Test\\Travel.Business\\Travel.Business.csproj",
         "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "D:\\Laboratory\\Travel\\Travel.Business\\obj\\",
+        "outputPath": "D:\\Labs\\Test.Solution\\Travel.Test\\Travel.Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -73,14 +73,14 @@
         }
       }
     },
-    "D:\\Laboratory\\Travel\\Travel.DataAccess\\Travel.DataAccess.csproj": {
+    "D:\\Labs\\Test.Solution\\Travel.Test\\Travel.DataAccess\\Travel.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Laboratory\\Travel\\Travel.DataAccess\\Travel.DataAccess.csproj",
+        "projectUniqueName": "D:\\Labs\\Test.Solution\\Travel.Test\\Travel.DataAccess\\Travel.DataAccess.csproj",
         "projectName": "Travel.DataAccess",
-        "projectPath": "D:\\Laboratory\\Travel\\Travel.DataAccess\\Travel.DataAccess.csproj",
+        "projectPath": "D:\\Labs\\Test.Solution\\Travel.Test\\Travel.DataAccess\\Travel.DataAccess.csproj",
         "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-        "outputPath": "D:\\Laboratory\\Travel\\Travel.DataAccess\\obj\\",
+        "outputPath": "D:\\Labs\\Test.Solution\\Travel.Test\\Travel.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -97,8 +97,8 @@
           "netcoreapp2.2": {
             "targetAlias": "netcoreapp2.2",
             "projectReferences": {
-              "D:\\Laboratory\\Travel\\Travel.Business\\Travel.Business.csproj": {
-                "projectPath": "D:\\Laboratory\\Travel\\Travel.Business\\Travel.Business.csproj"
+              "D:\\Labs\\Test.Solution\\Travel.Test\\Travel.Business\\Travel.Business.csproj": {
+                "projectPath": "D:\\Labs\\Test.Solution\\Travel.Test\\Travel.Business\\Travel.Business.csproj"
               }
             }
           }

@@ -865,11 +865,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Laboratory\\Travel\\Travel.Business\\Travel.Business.csproj",
+      "projectUniqueName": "D:\\Labs\\Test.Solution\\Travel.Test\\Travel.Business\\Travel.Business.csproj",
       "projectName": "Travel.Business",
-      "projectPath": "D:\\Laboratory\\Travel\\Travel.Business\\Travel.Business.csproj",
+      "projectPath": "D:\\Labs\\Test.Solution\\Travel.Test\\Travel.Business\\Travel.Business.csproj",
       "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-      "outputPath": "D:\\Laboratory\\Travel\\Travel.Business\\obj\\",
+      "outputPath": "D:\\Labs\\Test.Solution\\Travel.Test\\Travel.Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",

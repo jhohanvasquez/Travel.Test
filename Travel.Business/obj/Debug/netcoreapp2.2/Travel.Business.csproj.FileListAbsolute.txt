@@ -37,3 +37,13 @@ D:\Laboratory\Travel\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.Ass
 D:\Laboratory\Travel\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.csproj.CoreCompileInputs.cache
 D:\Laboratory\Travel\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.dll
 D:\Laboratory\Travel\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.pdb
+D:\Labs\Test.Solution\Travel.Test\Travel.Business\bin\Debug\netcoreapp2.2\Travel.Business.deps.json
+D:\Labs\Test.Solution\Travel.Test\Travel.Business\bin\Debug\netcoreapp2.2\Travel.Business.dll
+D:\Labs\Test.Solution\Travel.Test\Travel.Business\bin\Debug\netcoreapp2.2\Travel.Business.pdb
+D:\Labs\Test.Solution\Travel.Test\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\Labs\Test.Solution\Travel.Test\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.AssemblyInfoInputs.cache
+D:\Labs\Test.Solution\Travel.Test\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.AssemblyInfo.cs
+D:\Labs\Test.Solution\Travel.Test\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.csproj.CoreCompileInputs.cache
+D:\Labs\Test.Solution\Travel.Test\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.dll
+D:\Labs\Test.Solution\Travel.Test\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.pdb
+D:\Labs\Test.Solution\Travel.Test\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.csproj.AssemblyReference.cache

@@ -30,7 +30,7 @@ namespace Travel.Business.Services
 
         #region Public Members
 
-        public OperationResult GetFlight(OperationRequest operationRequest, string routeType,  int maxJourneyFlights)
+        public OperationResult GetFlight(OperationRequest operationRequest, string routeType, int maxJourneyFlights)
         {
             try
             {
@@ -40,8 +40,63 @@ namespace Travel.Business.Services
 
                 if (commandResponse != null)
                 {
+                    Journey oJourneyResponse = new Journey();
+                    int sumPrice = 0;
+
+                    var originFlights = commandResponse.Where(f => f.departureStation == operationRequest.Origin).ToList();
+
+                    foreach (var itemOrigin in originFlights)
+                    {                        
+                        switch (routeType)
+                        {
+                            case "0":
+                                Journey.Flight oFlightsItem1 = new Journey.Flight();
+                                Journey.Flight oFlightsItem2 = new Journey.Flight();
+                                var destinationFlights = commandResponse.Where(f => f.arrivalStation == itemOrigin.arrivalStation).FirstOrDefault();
+                                if (destinationFlights != null)
+                                {
+                                    oJourneyResponse.Flights = new List<Journey.Flight>();
+                                    oFlightsItem1.Origin = itemOrigin.departureStation;
+                                    oFlightsItem1.Destination = itemOrigin.arrivalStation;
+                                    oFlightsItem1.Price = itemOrigin.price;
+
+                                    oFlightsItem1.Transport = new Journey.Transport();
+                                    oFlightsItem1.Transport.FlightCarrier = itemOrigin.flightCarrier;
+                                    oFlightsItem1.Transport.FlightNumber = itemOrigin.flightNumber;
+
+                                    oJourneyResponse.Flights.Add(oFlightsItem1);
+                                    sumPrice += itemOrigin.price;
+
+                                    oJourneyResponse.Flights = new List<Journey.Flight>();
+                                    oFlightsItem2.Origin = destinationFlights.departureStation;
+                                    oFlightsItem2.Destination = destinationFlights.arrivalStation;
+                                    oFlightsItem2.Price = destinationFlights.price;
+
+                                    oFlightsItem2.Transport = new Journey.Transport();
+                                    oFlightsItem2.Transport.FlightCarrier = destinationFlights.flightCarrier;
+                                    oFlightsItem2.Transport.FlightNumber = destinationFlights.flightNumber;
+
+                                    oJourneyResponse.Flights.Add(oFlightsItem2);
+                                    sumPrice += destinationFlights.price;
+                                }
+                                break;
+                            case "1":
+
+                                break;
+                            case "2":
+
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+
+                    oJourneyResponse.Origin = operationRequest.Origin;
+                    oJourneyResponse.Destination = operationRequest.Destination;
+                    oJourneyResponse.Price = sumPrice;
+
                     //Realizar calculos y guarda en BD si se encuentra
-                   // SaveCommandSended(commandVehicle, securitySafe);
+                    // SaveCommandSended(commandVehicle, securitySafe);
                 }
                 else
                 {

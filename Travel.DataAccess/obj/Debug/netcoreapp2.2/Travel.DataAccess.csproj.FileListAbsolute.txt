@@ -50,3 +50,16 @@ D:\Laboratory\Travel\Travel.DataAccess\obj\Debug\netcoreapp2.2\Travel.DataAccess
 D:\Laboratory\Travel\Travel.DataAccess\obj\Debug\netcoreapp2.2\Travel.DataAccess.csproj.CopyComplete
 D:\Laboratory\Travel\Travel.DataAccess\obj\Debug\netcoreapp2.2\Travel.DataAccess.dll
 D:\Laboratory\Travel\Travel.DataAccess\obj\Debug\netcoreapp2.2\Travel.DataAccess.pdb
+D:\Labs\Test.Solution\Travel.Test\Travel.DataAccess\bin\Debug\netcoreapp2.2\Travel.DataAccess.deps.json
+D:\Labs\Test.Solution\Travel.Test\Travel.DataAccess\bin\Debug\netcoreapp2.2\Travel.DataAccess.dll
+D:\Labs\Test.Solution\Travel.Test\Travel.DataAccess\bin\Debug\netcoreapp2.2\Travel.DataAccess.pdb
+D:\Labs\Test.Solution\Travel.Test\Travel.DataAccess\bin\Debug\netcoreapp2.2\Travel.Business.dll
+D:\Labs\Test.Solution\Travel.Test\Travel.DataAccess\bin\Debug\netcoreapp2.2\Travel.Business.pdb
+D:\Labs\Test.Solution\Travel.Test\Travel.DataAccess\obj\Debug\netcoreapp2.2\Travel.DataAccess.csproj.AssemblyReference.cache
+D:\Labs\Test.Solution\Travel.Test\Travel.DataAccess\obj\Debug\netcoreapp2.2\Travel.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\Labs\Test.Solution\Travel.Test\Travel.DataAccess\obj\Debug\netcoreapp2.2\Travel.DataAccess.AssemblyInfoInputs.cache
+D:\Labs\Test.Solution\Travel.Test\Travel.DataAccess\obj\Debug\netcoreapp2.2\Travel.DataAccess.AssemblyInfo.cs
+D:\Labs\Test.Solution\Travel.Test\Travel.DataAccess\obj\Debug\netcoreapp2.2\Travel.DataAccess.csproj.CoreCompileInputs.cache
+D:\Labs\Test.Solution\Travel.Test\Travel.DataAccess\obj\Debug\netcoreapp2.2\Travel.DataAccess.csproj.CopyComplete
+D:\Labs\Test.Solution\Travel.Test\Travel.DataAccess\obj\Debug\netcoreapp2.2\Travel.DataAccess.dll
+D:\Labs\Test.Solution\Travel.Test\Travel.DataAccess\obj\Debug\netcoreapp2.2\Travel.DataAccess.pdb

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Travel.Business.Entities
 {
-    public class CommandResponse : JourneyResponse
+    public class CommandResponse : List<FlightResponse>
     {
     }
 }

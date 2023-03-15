@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NK1cXju6l0HDwCefptjfgt2Bv54NWlZSGF9wEQqIFeTjVt978/chQde8VILcxGUgPiSaErp+jCsnr0dF3pgzkg==",
+  "dgSpecHash": "3L5dbmENmgTIaWfEWVPCDv/BpM8AVtvUCF6y37VI9lTrbgT14teNFob+nkJ04poH/nhAnob9ka7xPysHM5mLCg==",
   "success": true,
-  "projectFilePath": "D:\\Laboratory\\Travel\\Travel.API\\Travel.API.csproj",
+  "projectFilePath": "D:\\Labs\\Test.Solution\\Travel.Test\\Travel.API\\Travel.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lenovo\\.nuget\\packages\\automapper\\8.1.1\\automapper.8.1.1.nupkg.sha512",
     "C:\\Users\\lenovo\\.nuget\\packages\\dapper\\2.0.30\\dapper.2.0.30.nupkg.sha512",
