@@ -6,7 +6,6 @@ namespace Travel.Business.Contracts
 {
     public interface IFlightBDRepository
     {
-        void Add(SecuritySafeEvent securitySafeEvent);
-        List<SecuritySafeStatus> GetFlightBDSearchs(List<string> serviceCodes);
+        int AddJourney(Journey journey);
     }
 }

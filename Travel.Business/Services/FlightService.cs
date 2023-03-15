@@ -94,16 +94,19 @@ namespace Travel.Business.Services
                     oJourneyResponse.Origin = operationRequest.Origin;
                     oJourneyResponse.Destination = operationRequest.Destination;
                     oJourneyResponse.Price = sumPrice;
-
-                    //Realizar calculos y guarda en BD si se encuentra
-                    // SaveCommandSended(commandVehicle, securitySafe);
                 }
                 else
                 {
                     //result.CodeError = Convert.ToString(commandResponse.StatusCode); 
                     //result.MessageError = commandResponse != null ? commandResponse.Message : "Command not sended";
                 }
-                
+
+                if(oJourneyResponse != null)
+                {
+                    //Realizar calculos y guarda en BD si se encuentra
+                    SaveTravelSearch(oJourneyResponse);
+                }               
+
 
                 return oJourneyResponse;
             }
@@ -114,26 +117,24 @@ namespace Travel.Business.Services
             }
         }
 
-        //private void SaveTravelSearch(Travel commandVehicle, SecuritySafe securitySafe)
-        //{
-        //    Travel travelSearch = new Travel();       
-
-        //    _flightBDRepository.Add(securitySafeEvent);
-        //}
+        private void SaveTravelSearch(Journey journey)
+        {
+            _flightBDRepository.AddJourney(journey);
+        }
 
         #endregion
 
         #region Private Members
 
-        /// <summary>
-        /// Validar busquedas
-        /// </summary>
-        /// <param name="physicalID"></param>
-        /// <returns></returns>
-        private SecuritySafeStatus GetSecuritySafe(string physicalID)
-        {
-            return _flightBDRepository.GetFlightBDSearchs(new List<string>() { physicalID }).FirstOrDefault();
-        }
+        ///// <summary>
+        ///// Validar busquedas
+        ///// </summary>
+        ///// <param name="physicalID"></param>
+        ///// <returns></returns>
+        //private SecuritySafeStatus GetSecuritySafe(string physicalID)
+        //{
+        //    return _flightBDRepository.GetFlightBDSearchs(new List<string>() { physicalID }).FirstOrDefault();
+        //}
 
         private CommandResponse GetFlight(string routeType)
         {
