@@ -30,17 +30,16 @@ namespace Travel.Business.Services
 
         #region Public Members
 
-        public OperationResult GetFlight(OperationRequest operationRequest, string routeType, int maxJourneyFlights)
+        public Journey GetFlight(OperationRequest operationRequest, string routeType, int maxJourneyFlights)
         {
             try
             {
-                OperationResult result = new OperationResult();
+                Journey oJourneyResponse = new Journey();
 
                 CommandResponse commandResponse = GetFlight(routeType);
 
                 if (commandResponse != null)
-                {
-                    Journey oJourneyResponse = new Journey();
+                {                    
                     int sumPrice = 0;
 
                     var originFlights = commandResponse.Where(f => f.departureStation == operationRequest.Origin).ToList();
@@ -66,8 +65,7 @@ namespace Travel.Business.Services
 
                                     oJourneyResponse.Flights.Add(oFlightsItem1);
                                     sumPrice += itemOrigin.price;
-
-                                    oJourneyResponse.Flights = new List<Journey.Flight>();
+                                    
                                     oFlightsItem2.Origin = destinationFlights.departureStation;
                                     oFlightsItem2.Destination = destinationFlights.arrivalStation;
                                     oFlightsItem2.Price = destinationFlights.price;
@@ -103,8 +101,9 @@ namespace Travel.Business.Services
                     //result.CodeError = Convert.ToString(commandResponse.StatusCode); 
                     //result.MessageError = commandResponse != null ? commandResponse.Message : "Command not sended";
                 }
+                
 
-                return result;
+                return oJourneyResponse;
             }
             catch (Exception ex)
             {

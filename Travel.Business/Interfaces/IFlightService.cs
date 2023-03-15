@@ -7,7 +7,7 @@ namespace Travel.Business.Interfaces
 {
     public interface IFlightService : IDisposable
     {
-        OperationResult GetFlight(OperationRequest operationRequest, string routeType, int maxJourneyFlights);
+        Journey GetFlight(OperationRequest operationRequest, string routeType, int maxJourneyFlights);
     }
 }
 
