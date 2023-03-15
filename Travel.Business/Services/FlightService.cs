@@ -38,7 +38,7 @@ namespace Travel.Business.Services
 
                 CommandResponse commandResponse = GetFlight(routeType);
 
-                if (commandResponse != null)
+                if (commandResponse != null && commandResponse.Count > 0)
                 {                    
                     int sumPrice = 0;
 
@@ -51,7 +51,8 @@ namespace Travel.Business.Services
                             case "0":
                                 Journey.Flight oFlightsItem1 = new Journey.Flight();
                                 Journey.Flight oFlightsItem2 = new Journey.Flight();
-                                var destinationFlights = commandResponse.Where(f => f.arrivalStation == itemOrigin.arrivalStation).FirstOrDefault();
+                                var destinationFlights = commandResponse.Where(f => f.departureStation == itemOrigin.arrivalStation && f.arrivalStation == operationRequest.Destination).FirstOrDefault();
+                                
                                 if (destinationFlights != null)
                                 {
                                     oJourneyResponse.Flights = new List<Journey.Flight>();
