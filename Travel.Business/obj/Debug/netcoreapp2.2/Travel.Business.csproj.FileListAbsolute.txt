@@ -1,0 +1,39 @@
+C:\Visual 2022\TravelTestAPI\TravelTestAPI\Travel.Business\bin\Debug\netcoreapp2.2\Travel.Business.deps.json
+C:\Visual 2022\TravelTestAPI\TravelTestAPI\Travel.Business\bin\Debug\netcoreapp2.2\Travel.Business.dll
+C:\Visual 2022\TravelTestAPI\TravelTestAPI\Travel.Business\bin\Debug\netcoreapp2.2\Travel.Business.pdb
+C:\Visual 2022\TravelTestAPI\TravelTestAPI\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Visual 2022\TravelTestAPI\TravelTestAPI\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.AssemblyInfoInputs.cache
+C:\Visual 2022\TravelTestAPI\TravelTestAPI\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.AssemblyInfo.cs
+C:\Visual 2022\TravelTestAPI\TravelTestAPI\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.csproj.CoreCompileInputs.cache
+C:\Visual 2022\TravelTestAPI\TravelTestAPI\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.dll
+C:\Visual 2022\TravelTestAPI\TravelTestAPI\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.pdb
+C:\Visual 2022\TravelTestAPI\TravelTestAPI\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.csproj.AssemblyReference.cache
+D:\Laboratory\TravelTestAPI\TravelTestAPI\Travel.Business\bin\Debug\netcoreapp2.2\Travel.Business.deps.json
+D:\Laboratory\TravelTestAPI\TravelTestAPI\Travel.Business\bin\Debug\netcoreapp2.2\Travel.Business.dll
+D:\Laboratory\TravelTestAPI\TravelTestAPI\Travel.Business\bin\Debug\netcoreapp2.2\Travel.Business.pdb
+D:\Laboratory\TravelTestAPI\TravelTestAPI\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\Laboratory\TravelTestAPI\TravelTestAPI\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.AssemblyInfoInputs.cache
+D:\Laboratory\TravelTestAPI\TravelTestAPI\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.AssemblyInfo.cs
+D:\Laboratory\TravelTestAPI\TravelTestAPI\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.csproj.CoreCompileInputs.cache
+D:\Laboratory\TravelTestAPI\TravelTestAPI\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.dll
+D:\Laboratory\TravelTestAPI\TravelTestAPI\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.pdb
+D:\Laboratory\Travel.Test\Travel.Business\bin\Debug\netcoreapp2.2\Travel.Business.deps.json
+D:\Laboratory\Travel.Test\Travel.Business\bin\Debug\netcoreapp2.2\Travel.Business.dll
+D:\Laboratory\Travel.Test\Travel.Business\bin\Debug\netcoreapp2.2\Travel.Business.pdb
+D:\Laboratory\Travel.Test\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.csproj.AssemblyReference.cache
+D:\Laboratory\Travel.Test\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\Laboratory\Travel.Test\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.AssemblyInfoInputs.cache
+D:\Laboratory\Travel.Test\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.AssemblyInfo.cs
+D:\Laboratory\Travel.Test\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.csproj.CoreCompileInputs.cache
+D:\Laboratory\Travel.Test\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.dll
+D:\Laboratory\Travel.Test\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.pdb
+D:\Laboratory\Travel\Travel.Business\bin\Debug\netcoreapp2.2\Travel.Business.deps.json
+D:\Laboratory\Travel\Travel.Business\bin\Debug\netcoreapp2.2\Travel.Business.dll
+D:\Laboratory\Travel\Travel.Business\bin\Debug\netcoreapp2.2\Travel.Business.pdb
+D:\Laboratory\Travel\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.csproj.AssemblyReference.cache
+D:\Laboratory\Travel\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\Laboratory\Travel\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.AssemblyInfoInputs.cache
+D:\Laboratory\Travel\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.AssemblyInfo.cs
+D:\Laboratory\Travel\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.csproj.CoreCompileInputs.cache
+D:\Laboratory\Travel\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.dll
+D:\Laboratory\Travel\Travel.Business\obj\Debug\netcoreapp2.2\Travel.Business.pdb
