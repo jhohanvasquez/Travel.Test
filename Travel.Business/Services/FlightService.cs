@@ -39,13 +39,13 @@ namespace Travel.Business.Services
                 CommandResponse commandResponse = GetFlight(routeType);
 
                 if (commandResponse != null && commandResponse.Count > 0)
-                {                    
+                {
                     int sumPrice = 0;
 
                     var originFlights = commandResponse.Where(f => f.departureStation == operationRequest.Origin).ToList();
 
                     foreach (var itemOrigin in originFlights)
-                    {                        
+                    {
                         switch (routeType)
                         {
                             case "0":
@@ -53,7 +53,7 @@ namespace Travel.Business.Services
                                 Journey.Flight oFlightsItem2 = new Journey.Flight();
 
                                 var destinationFlights = commandResponse.Where(f => f.departureStation == itemOrigin.arrivalStation && f.arrivalStation == operationRequest.Destination).FirstOrDefault();
-                                
+
                                 if (destinationFlights != null)
                                 {
                                     oJourneyResponse.Flights = new List<Journey.Flight>();
@@ -67,7 +67,7 @@ namespace Travel.Business.Services
 
                                     oJourneyResponse.Flights.Add(oFlightsItem1);
                                     sumPrice += itemOrigin.price;
-                                    
+
                                     oFlightsItem2.Origin = destinationFlights.departureStation;
                                     oFlightsItem2.Destination = destinationFlights.arrivalStation;
                                     oFlightsItem2.Price = destinationFlights.price;
@@ -101,11 +101,11 @@ namespace Travel.Business.Services
                     //result.MessageError = commandResponse != null ? commandResponse.Message : "Command not sended";
                 }
 
-                if(oJourneyResponse != null)
+                if (oJourneyResponse != null)
                 {
-                    //Realizar calculos y guarda en BD si se encuentra
+                    //Guarda en BD si se encuentra
                     SaveTravelSearch(oJourneyResponse);
-                }               
+                }
 
 
                 return oJourneyResponse;
@@ -119,7 +119,21 @@ namespace Travel.Business.Services
 
         private void SaveTravelSearch(Journey journey)
         {
-            _flightBDRepository.AddJourney(journey);
+            try
+            {
+                var idJourney = _flightBDRepository.AddJourney(journey);
+                foreach (var itemFlights in journey.Flights)
+                {
+                    var idFlight = _flightBDRepository.AddFlight(itemFlights, idJourney);
+                    _flightBDRepository.AddTransport(itemFlights.Transport, idFlight);
+                }
+            }
+            catch (Exception ex)
+            {
+                logRegister.Save(System.Reflection.MethodBase.GetCurrentMethod().ReflectedType.Name, "SaveTravelSearch", string.Format("{0} {1} {2} {3}", this.GetType().Name, System.Reflection.MethodBase.GetCurrentMethod().ReflectedType.Name, ex.Message, ex.StackTrace));
+                throw;
+            }    
+           
         }
 
         #endregion

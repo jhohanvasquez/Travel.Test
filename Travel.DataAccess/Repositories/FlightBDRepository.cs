@@ -44,5 +44,53 @@ namespace Travel.DataAccess.Repositories
                 return 0;
             }
         }
+
+        public int AddFlight(Journey.Flight flight, int idJourney)
+        {
+            try
+            {
+                string sqlInsertBase = "INSERT INTO SafeCommands (IdJourney, Origin, Destination, 'IdTypeRequest')";
+                sqlInsertBase += "VALUES('@IdJourney', '@Origin', '@Destination', '@IdTypeRequest');";
+
+                sqlInsertBase = sqlInsertBase.Replace("@IdJourney", Convert.ToString(idJourney));
+                sqlInsertBase = sqlInsertBase.Replace("@Origin", flight.Origin);
+                sqlInsertBase = sqlInsertBase.Replace("@Destination", flight.Destination);
+                sqlInsertBase = sqlInsertBase.Replace("@Price", Convert.ToString(flight.Price));
+
+                using (var connection = new SqlConnection(_settings.ConnectionString))
+                {
+                    return (int)connection.ExecuteScalar(sqlInsertBase.ToString(), commandTimeout: 120);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception: " + ex.Message);
+                return 0;
+            }
+        }
+
+        public void AddTransport(Journey.Transport transport, int IdFlights)
+        {
+            try
+            {
+                string sqlInsertBase = "INSERT INTO TbTransport (IdFlights, FlightCarrier, FlightNumber)";
+                sqlInsertBase += "VALUES('@IdFlights', '@FlightCarrier', '@FlightNumber');";
+
+                sqlInsertBase = sqlInsertBase.Replace("@IdFlights", Convert.ToString(IdFlights));
+                sqlInsertBase = sqlInsertBase.Replace("@FlightCarrier", transport.FlightCarrier);
+                sqlInsertBase = sqlInsertBase.Replace("@FlightNumber", transport.FlightNumber);
+
+                using (var connection = new SqlConnection(_settings.ConnectionString))
+                {
+                    connection.ExecuteScalar(sqlInsertBase.ToString(), commandTimeout: 120);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception: " + ex.Message);
+            }
+        }
     }
 }
