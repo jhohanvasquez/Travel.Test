@@ -4,9 +4,9 @@ La empresa NEWSHORE AIR necesita una solución para poder conectar viajes a trav
 * ASP.NETCore 3.1
 * C#
 * Arquitectura en Capas
-* Swagger v1
+* Swagger v1 (Ejecucion API)
 * Azure (Base de Datos - Log)
-* Dapper
+* Dapper (Manejo de Datos BD)
 * Cache (Microsoft.Extensions.Caching.Memory)
 * Script Data Base (https://github.com/jhohanvasquez/Travel.Test/tree/main/BDScript)
 
