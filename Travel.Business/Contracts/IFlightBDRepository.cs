@@ -10,5 +10,6 @@ namespace Travel.Business.Contracts
         decimal AddFlight(Journey.Flight flight, decimal idJourney);
         void AddTransport(Journey.Transport transport, decimal IdFlights);
         int GetTypeRequest(string integrateCode);
+        Journey GetJourneySearch(OperationRequest operationRequest);
     }
 }

@@ -24,13 +24,6 @@ D:\Labs\Test.Solution\Travel.Test\Travel.API\bin\Debug\netcoreapp3.1\Microsoft.V
 D:\Labs\Test.Solution\Travel.Test\Travel.API\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
 D:\Labs\Test.Solution\Travel.Test\Travel.API\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 D:\Labs\Test.Solution\Travel.Test\Travel.API\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
-D:\Labs\Test.Solution\Travel.Test\Travel.API\bin\Debug\netcoreapp3.1\Microsoft.ApplicationServer.Caching.AzureClientHelper.dll
-D:\Labs\Test.Solution\Travel.Test\Travel.API\bin\Debug\netcoreapp3.1\Microsoft.ApplicationServer.Caching.AzureCommon.dll
-D:\Labs\Test.Solution\Travel.Test\Travel.API\bin\Debug\netcoreapp3.1\Microsoft.ApplicationServer.Caching.Client.dll
-D:\Labs\Test.Solution\Travel.Test\Travel.API\bin\Debug\netcoreapp3.1\Microsoft.ApplicationServer.Caching.Core.dll
-D:\Labs\Test.Solution\Travel.Test\Travel.API\bin\Debug\netcoreapp3.1\Microsoft.Web.DistributedCache.dll
-D:\Labs\Test.Solution\Travel.Test\Travel.API\bin\Debug\netcoreapp3.1\Microsoft.WindowsFabric.Common.dll
-D:\Labs\Test.Solution\Travel.Test\Travel.API\bin\Debug\netcoreapp3.1\Microsoft.WindowsFabric.Data.Common.dll
 D:\Labs\Test.Solution\Travel.Test\Travel.API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 D:\Labs\Test.Solution\Travel.Test\Travel.API\bin\Debug\netcoreapp3.1\NuGet.Frameworks.dll
 D:\Labs\Test.Solution\Travel.Test\Travel.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll

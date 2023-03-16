@@ -29,6 +29,13 @@ namespace Travel.DataAccess.Repositories
             }
         }
 
+        public Journey GetJourneySearch(OperationRequest operationRequest)
+        {
+            string sqlQuery = "SELECT * FROM [dbo].[TbJourney] WHERE Origin = '@Origin' AND Destination = '@Destination'";
+            using var connection = new SqlConnection(_settings.ConnectionString);
+            return connection.Query<Journey>(sqlQuery, new { Origin = operationRequest.Origin, Destination = operationRequest.Destination }).FirstOrDefault();
+        }
+
         public decimal AddJourney(Journey journey)
         {
             try

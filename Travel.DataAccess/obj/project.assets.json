@@ -124,27 +124,6 @@
           }
         }
       },
-      "Microsoft.WindowsAzure.Caching/2.9.5": {
-        "type": "package",
-        "compile": {
-          "lib/net40-full/Microsoft.ApplicationServer.Caching.AzureClientHelper.dll": {},
-          "lib/net40-full/Microsoft.ApplicationServer.Caching.AzureCommon.dll": {},
-          "lib/net40-full/Microsoft.ApplicationServer.Caching.Client.dll": {},
-          "lib/net40-full/Microsoft.ApplicationServer.Caching.Core.dll": {},
-          "lib/net40-full/Microsoft.Web.DistributedCache.dll": {},
-          "lib/net40-full/Microsoft.WindowsFabric.Common.dll": {},
-          "lib/net40-full/Microsoft.WindowsFabric.Data.Common.dll": {}
-        },
-        "runtime": {
-          "lib/net40-full/Microsoft.ApplicationServer.Caching.AzureClientHelper.dll": {},
-          "lib/net40-full/Microsoft.ApplicationServer.Caching.AzureCommon.dll": {},
-          "lib/net40-full/Microsoft.ApplicationServer.Caching.Client.dll": {},
-          "lib/net40-full/Microsoft.ApplicationServer.Caching.Core.dll": {},
-          "lib/net40-full/Microsoft.Web.DistributedCache.dll": {},
-          "lib/net40-full/Microsoft.WindowsFabric.Common.dll": {},
-          "lib/net40-full/Microsoft.WindowsFabric.Data.Common.dll": {}
-        }
-      },
       "NETStandard.Library/1.6.1": {
         "type": "package",
         "dependencies": {
@@ -1449,7 +1428,6 @@
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "Dapper": "2.0.30",
-          "Microsoft.WindowsAzure.Caching": "2.9.5",
           "Newtonsoft.Json": "12.0.3",
           "WindowsAzure.Storage": "9.3.3"
         },
@@ -1717,42 +1695,6 @@
         "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.xml",
         "useSharedDesignerContext.txt",
         "version.txt"
-      ]
-    },
-    "Microsoft.WindowsAzure.Caching/2.9.5": {
-      "sha512": "ra7sZIOxbWi91YG2ZMd7vJjB8m0+BfqMB/hvfxtyp/ciD9zV4UTdOzMg/ehwSG4vrGFUVee8TPT/lxc+OMNGOQ==",
-      "type": "package",
-      "path": "microsoft.windowsazure.caching/2.9.5",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "content/Microsoft.WindowsAzure.Caching/ClientPerfCountersInstaller.exe",
-        "content/Microsoft.WindowsAzure.Caching/ClientPerfCountersInstaller.exe.config",
-        "content/Microsoft.WindowsAzure.Caching/PerformanceCounters.xml",
-        "content/app.config.Transform",
-        "content/web.config.Transform",
-        "lib/net35/Microsoft.ApplicationServer.Caching.Client.dll",
-        "lib/net35/Microsoft.ApplicationServer.Caching.Client.xml",
-        "lib/net35/Microsoft.ApplicationServer.Caching.Core.dll",
-        "lib/net35/Microsoft.ApplicationServer.Caching.Core.xml",
-        "lib/net35/Microsoft.Web.DistributedCache.dll",
-        "lib/net35/Microsoft.WindowsFabric.Common.dll",
-        "lib/net35/Microsoft.WindowsFabric.Data.Common.dll",
-        "lib/net40-full/Microsoft.ApplicationServer.Caching.AzureClientHelper.dll",
-        "lib/net40-full/Microsoft.ApplicationServer.Caching.AzureCommon.dll",
-        "lib/net40-full/Microsoft.ApplicationServer.Caching.AzureCommon.xml",
-        "lib/net40-full/Microsoft.ApplicationServer.Caching.Client.dll",
-        "lib/net40-full/Microsoft.ApplicationServer.Caching.Client.xml",
-        "lib/net40-full/Microsoft.ApplicationServer.Caching.Core.dll",
-        "lib/net40-full/Microsoft.ApplicationServer.Caching.Core.xml",
-        "lib/net40-full/Microsoft.Web.DistributedCache.dll",
-        "lib/net40-full/Microsoft.WindowsFabric.Common.dll",
-        "lib/net40-full/Microsoft.WindowsFabric.Data.Common.dll",
-        "microsoft.windowsazure.caching.2.9.5.nupkg.sha512",
-        "microsoft.windowsazure.caching.nuspec",
-        "tools/install.ps1",
-        "tools/uninstall.ps1"
       ]
     },
     "NETStandard.Library/1.6.1": {
@@ -5501,17 +5443,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.414\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "El paquete \"Microsoft.WindowsAzure.Caching 2.9.5\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \".NETCoreApp,Version=v3.1\". Puede que el paquete no sea totalmente compatible con el proyecto.",
-      "libraryId": "Microsoft.WindowsAzure.Caching",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    }
-  ]
+  }
 }

@@ -15,7 +15,4 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgMicrosoft_WindowsAzure_Caching Condition=" '$(PkgMicrosoft_WindowsAzure_Caching)' == '' ">C:\Users\lenovo\.nuget\packages\microsoft.windowsazure.caching\2.9.5</PkgMicrosoft_WindowsAzure_Caching>
-  </PropertyGroup>
 </Project>
