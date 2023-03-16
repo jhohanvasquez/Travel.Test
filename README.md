@@ -8,6 +8,7 @@ La empresa NEWSHORE AIR necesita una solución para poder conectar viajes a trav
 * Azure (Base de Datos - Log)
 * Dapper
 * Cache (Microsoft.Extensions.Caching.Memory)
+* Script Data Base (https://github.com/jhohanvasquez/Travel.Test/tree/main/BDScript)
 
 Se debe modificar las conexiones tanto a BD como a Azure, para el registro del los y busquedas en bases de datos.
 
