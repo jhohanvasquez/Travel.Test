@@ -29,3 +29,6 @@ Se debe modificar las conexiones tanto a BD como a Azure, para el registro del l
 
 ![image](https://user-images.githubusercontent.com/36570532/225505818-43988bb4-56ba-40c3-9693-8e077a2e745f.png)
 
+- Validacion Vuelos no Disponibles
+
+![image](https://user-images.githubusercontent.com/36570532/225627740-745525c6-307c-4386-b71f-012539ad2da6.png)
