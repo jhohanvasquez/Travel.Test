@@ -122,7 +122,7 @@ namespace Travel.Business.Services
                     var oJourneySearch = _flightBDRepository.GetFlightsSearch(oJourney.IdJourney);
                     foreach (var itemFlights in oJourneySearch)
                     {
-                        itemFlights.Transport = _flightBDRepository.GetTransportSearch(itemFlights.IdFlight);
+                        itemFlights.Transport = _flightBDRepository.GetTransportSearch(itemFlights.IdFlights);
                         if (oJourney.Flights != null)
                         {
                             oJourney.Flights.Add(itemFlights);

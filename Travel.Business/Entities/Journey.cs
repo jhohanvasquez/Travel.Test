@@ -16,7 +16,7 @@ namespace Travel.Business.Entities
 
         public class Flight
         {
-            public decimal IdFlight { get; set; }
+            public decimal IdFlights { get; set; }
             public string Origin { get; set; }
             public string Destination { get; set; }
             public decimal Price { get; set; }
