@@ -9,6 +9,7 @@
       "Travel.Business/1.0.0": {
         "dependencies": {
           "Dapper": "2.0.30",
+          "Microsoft.WindowsAzure.Caching": "2.9.5",
           "Newtonsoft.Json": "12.0.3",
           "WindowsAzure.Storage": "9.3.3"
         },
@@ -24,6 +25,38 @@
           "lib/netstandard2.0/Dapper.dll": {
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "2.0.30.32292"
+          }
+        }
+      },
+      "Microsoft.WindowsAzure.Caching/2.9.5": {
+        "runtime": {
+          "lib/net40-full/Microsoft.ApplicationServer.Caching.AzureClientHelper.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.5966.0"
+          },
+          "lib/net40-full/Microsoft.ApplicationServer.Caching.AzureCommon.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.5966.0"
+          },
+          "lib/net40-full/Microsoft.ApplicationServer.Caching.Client.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.5966.0"
+          },
+          "lib/net40-full/Microsoft.ApplicationServer.Caching.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.5966.0"
+          },
+          "lib/net40-full/Microsoft.Web.DistributedCache.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.20719.0"
+          },
+          "lib/net40-full/Microsoft.WindowsFabric.Common.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.5627.0"
+          },
+          "lib/net40-full/Microsoft.WindowsFabric.Data.Common.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.5627.0"
           }
         }
       },
@@ -61,6 +94,13 @@
       "sha512": "sha512-nL0VEpvunjIQ3jTI1x27b7BS3BnRnn5b2vhxsU2pWEd9SljF5WUQLoV/83qXTm0yaHmejRV/ndI3EApGlrgPqw==",
       "path": "dapper/2.0.30",
       "hashPath": "dapper.2.0.30.nupkg.sha512"
+    },
+    "Microsoft.WindowsAzure.Caching/2.9.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ra7sZIOxbWi91YG2ZMd7vJjB8m0+BfqMB/hvfxtyp/ciD9zV4UTdOzMg/ehwSG4vrGFUVee8TPT/lxc+OMNGOQ==",
+      "path": "microsoft.windowsazure.caching/2.9.5",
+      "hashPath": "microsoft.windowsazure.caching.2.9.5.nupkg.sha512"
     },
     "Newtonsoft.Json/12.0.3": {
       "type": "package",

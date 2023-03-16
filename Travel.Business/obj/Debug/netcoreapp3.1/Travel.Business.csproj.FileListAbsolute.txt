@@ -1,0 +1,10 @@
+D:\Labs\Test.Solution\Travel.Test\Travel.Business\bin\Debug\netcoreapp3.1\Travel.Business.deps.json
+D:\Labs\Test.Solution\Travel.Test\Travel.Business\bin\Debug\netcoreapp3.1\Travel.Business.dll
+D:\Labs\Test.Solution\Travel.Test\Travel.Business\bin\Debug\netcoreapp3.1\Travel.Business.pdb
+D:\Labs\Test.Solution\Travel.Test\Travel.Business\obj\Debug\netcoreapp3.1\Travel.Business.csproj.AssemblyReference.cache
+D:\Labs\Test.Solution\Travel.Test\Travel.Business\obj\Debug\netcoreapp3.1\Travel.Business.GeneratedMSBuildEditorConfig.editorconfig
+D:\Labs\Test.Solution\Travel.Test\Travel.Business\obj\Debug\netcoreapp3.1\Travel.Business.AssemblyInfoInputs.cache
+D:\Labs\Test.Solution\Travel.Test\Travel.Business\obj\Debug\netcoreapp3.1\Travel.Business.AssemblyInfo.cs
+D:\Labs\Test.Solution\Travel.Test\Travel.Business\obj\Debug\netcoreapp3.1\Travel.Business.csproj.CoreCompileInputs.cache
+D:\Labs\Test.Solution\Travel.Test\Travel.Business\obj\Debug\netcoreapp3.1\Travel.Business.dll
+D:\Labs\Test.Solution\Travel.Test\Travel.Business\obj\Debug\netcoreapp3.1\Travel.Business.pdb

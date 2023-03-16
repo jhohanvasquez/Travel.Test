@@ -20,12 +20,21 @@ namespace Travel.DataAccess.Repositories
             _settings = settings.Value ?? throw new ArgumentNullException(nameof(settings));
         }
 
-        public int AddJourney(Journey journey)
+        public int GetTypeRequest(string integrateCode)
+        {
+            string sqlQuery = "SELECT IdTypeRequest FROM [dbo].[TbTypeRequest] WHERE IntegrateCode = @IntegrateCode";
+            using (var connection = new SqlConnection(_settings.ConnectionString))
+            {
+                return (int)connection.Query<int?>(sqlQuery, new { IntegrateCode = integrateCode }).FirstOrDefault();
+            }
+        }
+
+        public decimal AddJourney(Journey journey)
         {
             try
             {
                 string sqlInsertBase = "INSERT INTO TbJourney (Origin, Destination, Price, IdTypeRequest)";
-                sqlInsertBase += "VALUES('@Origin', '@Destination', '@Price', '@IdTypeRequest');";
+                sqlInsertBase += "VALUES('@Origin', '@Destination', '@Price', '@IdTypeRequest'); SELECT SCOPE_IDENTITY();";
 
                 sqlInsertBase = sqlInsertBase.Replace("@Origin", journey.Origin);
                 sqlInsertBase = sqlInsertBase.Replace("@Destination", journey.Destination);
@@ -34,7 +43,8 @@ namespace Travel.DataAccess.Repositories
 
                 using (var connection = new SqlConnection(_settings.ConnectionString))
                 {
-                    return (int)connection.ExecuteScalar(sqlInsertBase.ToString(), commandTimeout: 120);
+                    var result = connection.ExecuteScalar(sqlInsertBase, commandTimeout: 120);
+                    return (decimal)connection.ExecuteScalar(sqlInsertBase, commandTimeout: 120);
                 }
 
             }
@@ -45,12 +55,12 @@ namespace Travel.DataAccess.Repositories
             }
         }
 
-        public int AddFlight(Journey.Flight flight, int idJourney)
+        public decimal AddFlight(Journey.Flight flight, decimal idJourney)
         {
             try
             {
-                string sqlInsertBase = "INSERT INTO TbFlights (IdJourney, Origin, Destination, IdTypeRequest)";
-                sqlInsertBase += "VALUES('@IdJourney', '@Origin', '@Destination', '@IdTypeRequest');";
+                string sqlInsertBase = "INSERT INTO TbFlights (IdJourney, Origin, Destination, Price)";
+                sqlInsertBase += "VALUES('@IdJourney', '@Origin', '@Destination', '@Price'); SELECT SCOPE_IDENTITY();";
 
                 sqlInsertBase = sqlInsertBase.Replace("@IdJourney", Convert.ToString(idJourney));
                 sqlInsertBase = sqlInsertBase.Replace("@Origin", flight.Origin);
@@ -59,7 +69,7 @@ namespace Travel.DataAccess.Repositories
 
                 using (var connection = new SqlConnection(_settings.ConnectionString))
                 {
-                    return (int)connection.ExecuteScalar(sqlInsertBase.ToString(), commandTimeout: 120);
+                    return (decimal)connection.ExecuteScalar(sqlInsertBase.ToString(), commandTimeout: 120);
                 }
 
             }
@@ -70,7 +80,7 @@ namespace Travel.DataAccess.Repositories
             }
         }
 
-        public void AddTransport(Journey.Transport transport, int IdFlights)
+        public void AddTransport(Journey.Transport transport, decimal IdFlights)
         {
             try
             {

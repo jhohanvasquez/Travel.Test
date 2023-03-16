@@ -42,7 +42,7 @@ namespace Travel.Business.Services
                 {
                     int sumPrice = 0;
 
-                    var originFlights = commandResponse.Where(f => f.departureStation == operationRequest.Origin).ToList();
+                    var originFlights = commandResponse.Where(f => f.departureStation == operationRequest.Origin).Take(maxJourneyFlights).ToList();
 
                     foreach (var itemOrigin in originFlights)
                     {
@@ -91,6 +91,7 @@ namespace Travel.Business.Services
                         }
                     }
 
+                    oJourneyResponse.IdTypeRequest = _flightBDRepository.GetTypeRequest(routeType);
                     oJourneyResponse.Origin = operationRequest.Origin;
                     oJourneyResponse.Destination = operationRequest.Destination;
                     oJourneyResponse.Price = sumPrice;
@@ -132,27 +133,18 @@ namespace Travel.Business.Services
             {
                 logRegister.Save(System.Reflection.MethodBase.GetCurrentMethod().ReflectedType.Name, "SaveTravelSearch", string.Format("{0} {1} {2} {3}", this.GetType().Name, System.Reflection.MethodBase.GetCurrentMethod().ReflectedType.Name, ex.Message, ex.StackTrace));
                 throw;
-            }    
-           
+            }
+
         }
 
         #endregion
 
         #region Private Members
 
-        ///// <summary>
-        ///// Validar busquedas
-        ///// </summary>
-        ///// <param name="physicalID"></param>
-        ///// <returns></returns>
-        //private SecuritySafeStatus GetSecuritySafe(string physicalID)
-        //{
-        //    return _flightBDRepository.GetFlightBDSearchs(new List<string>() { physicalID }).FirstOrDefault();
-        //}
-
         private CommandResponse GetFlight(string routeType)
         {
             return this._flightRepository.GetFlight(routeType);
+
         }
 
         #endregion

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using Travel.DataAccess.DTO;
 using AutoMapper;
 using System.Linq;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace Travel.API.Controllers
 {
@@ -18,25 +19,44 @@ namespace Travel.API.Controllers
     [Route("api/[controller]")]
     public class TravelController : Controller
     {
+        private const string journeyCacheKey = "journey";
         private readonly IFlightService _flightService;
         private readonly GeneralSettings _settings;
         private readonly IMapper _mapper;
+        private IMemoryCache _cache;
 
-        public TravelController(IFlightService flightService, IOptions<ApiSettings> settings, IMapper mapper)
+        public TravelController(IFlightService flightService, IOptions<ApiSettings> settings, IMapper mapper, IMemoryCache cache)
         {
             _flightService = flightService;
             _settings = settings.Value.environmentVariables.GeneralSettings;
             _mapper = mapper;
+            _cache = cache ?? throw new ArgumentNullException(nameof(cache));
         }
 
         [HttpPost("travels")]
-        public ActionResult<OperationResult> GetTravels([FromBody] OperationRequest Request, string type)
+        public ActionResult<OperationResult> GetTravels([FromBody] OperationRequest Request, string typeRequest)
         {
             Console.WriteLine($"[{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}] Consulta Viajes");
 
             if (Request != null)
             {
-                return Ok(_flightService.GetFlight(Request, type, _settings.MaxJourneyFlights));
+                if (_cache.TryGetValue(journeyCacheKey, out Journey journey))
+                {
+                    //Cache Exist journey
+                }
+                else
+                {
+
+                    journey = _flightService.GetFlight(Request, typeRequest, _settings.MaxJourneyFlights);
+                    var cacheEntryOptions = new MemoryCacheEntryOptions()
+                            .SetSlidingExpiration(TimeSpan.FromSeconds(60))
+                            .SetAbsoluteExpiration(TimeSpan.FromSeconds(3600))
+                            .SetPriority(CacheItemPriority.Normal)
+                            .SetSize(1024);
+                    _cache.Set(journeyCacheKey, journey, cacheEntryOptions);
+                }
+
+                return Ok(journey);
             }
             else
             {
