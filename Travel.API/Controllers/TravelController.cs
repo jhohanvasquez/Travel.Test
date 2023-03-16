@@ -49,12 +49,21 @@ namespace Travel.API.Controllers
                     //Create Cache  journey
 
                     journey = _flightService.GetFlight(Request, typeRequest, _settings.MaxJourneyFlights);
-                    var cacheEntryOptions = new MemoryCacheEntryOptions()
+
+                    if (journey.SuccesSearchs)
+                    {
+                        var cacheEntryOptions = new MemoryCacheEntryOptions()
                             .SetSlidingExpiration(TimeSpan.FromSeconds(60))
                             .SetAbsoluteExpiration(TimeSpan.FromSeconds(3600))
                             .SetPriority(CacheItemPriority.Normal)
                             .SetSize(1024);
-                    _cache.Set(journeyCacheKey, journey, cacheEntryOptions);
+                        _cache.Set(journeyCacheKey, journey, cacheEntryOptions);
+                    }
+                    else
+                    {
+                        return BadRequest(journey.ErrorMessage);
+                    }
+
                 }
 
                 return Ok(journey);

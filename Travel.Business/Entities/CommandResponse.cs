@@ -7,5 +7,6 @@ namespace Travel.Business.Entities
 {
     public class CommandResponse : List<FlightResponse>
     {
+       
     }
 }

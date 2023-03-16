@@ -97,6 +97,13 @@ namespace Travel.Business.Services
                             }
                         }
 
+                        if (oJourneyResponse.Flights.Count < 1)
+                        {
+                            oJourneyResponse.SuccesSearchs = false;
+                            oJourneyResponse.ErrorMessage = "Error vuelos no disponibles, Intente mas tarde.";
+                            return oJourneyResponse;
+                        }
+
                         oJourneyResponse.IdTypeRequest = _flightBDRepository.GetTypeRequest(routeType);
                         oJourneyResponse.Origin = operationRequest.Origin;
                         oJourneyResponse.Destination = operationRequest.Destination;
@@ -104,8 +111,8 @@ namespace Travel.Business.Services
                     }
                     else
                     {
-                        //result.CodeError = Convert.ToString(commandResponse.StatusCode); 
-                        //result.MessageError = commandResponse != null ? commandResponse.Message : "Command not sended";
+                        oJourneyResponse.SuccesSearchs = false;
+                        oJourneyResponse.ErrorMessage = "Error consultando vuelos, Intente mas tarde.";
                     }
 
                     if (oJourneyResponse != null)

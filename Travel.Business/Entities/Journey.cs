@@ -13,6 +13,8 @@ namespace Travel.Business.Entities
         public decimal Price { get; set; }
         public decimal IdTypeRequest { get; set; }
         public List<Flight> Flights { get; set; }
+        public bool SuccesSearchs { get; set; }
+        public string ErrorMessage { get; set; }
 
         public class Flight
         {

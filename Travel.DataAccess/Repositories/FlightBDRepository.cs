@@ -53,10 +53,10 @@ namespace Travel.DataAccess.Repositories
 
         public Journey.Transport GetTransportSearch(decimal idFlight)
         {
-            string sqlQuery = "SELECT * FROM [dbo].[TbTransport] Transport WHERE IdFlight = @IdFlight";
-            sqlQuery = sqlQuery.Replace("@IdFlight", Convert.ToString(idFlight));
+            string sqlQuery = "SELECT * FROM [dbo].[TbTransport] Transport WHERE IdFlights = @IdFlights";
+            sqlQuery = sqlQuery.Replace("@IdFlights", Convert.ToString(idFlight));
             using var connection = new SqlConnection(_settings.ConnectionString);
-            var result = connection.Query<Journey.Transport>(sqlQuery, new { IdJourney = idFlight }).FirstOrDefault();
+            var result = connection.Query<Journey.Transport>(sqlQuery, new { IdFlights = idFlight }).FirstOrDefault();
             return result;
         }
 
