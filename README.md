@@ -27,4 +27,5 @@ Se debe modificar las conexiones tanto a BD como a Azure, para el registro del l
 
 ![image](https://user-images.githubusercontent.com/36570532/225488079-31d9b296-37a9-45c1-a315-67be02071682.png)
 
-![image](https://user-images.githubusercontent.com/36570532/225488099-f2131bb6-2d7b-4fb3-b26e-385bd6609484.png)
+![image](https://user-images.githubusercontent.com/36570532/225505818-43988bb4-56ba-40c3-9693-8e077a2e745f.png)
+
