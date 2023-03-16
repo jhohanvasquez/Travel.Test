@@ -97,7 +97,7 @@ namespace Travel.Business.Services
                             }
                         }
 
-                        if (oJourneyResponse != null && oJourneyResponse.Flights.Count < 1)
+                        if (oJourneyResponse.Flights != null && oJourneyResponse.Flights.Count < 1)
                         {
                             oJourneyResponse.SuccesSearchs = false;
                             oJourneyResponse.ErrorMessage = "Error vuelos no disponibles, Intente mas tarde.";
