@@ -17,7 +17,7 @@ Se debe modificar las conexiones tanto a BD como a Azure, para el registro del l
 
 - Swagger Run
 
-![image](https://user-images.githubusercontent.com/36570532/225385923-2504a620-3eab-4e6d-b87b-24d2b5989610.png)
+![image](https://user-images.githubusercontent.com/36570532/225628087-ea7ed576-133d-4831-abb4-4dabff853fa2.png)
 
 - BDTravel.Test
 
