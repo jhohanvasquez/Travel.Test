@@ -11,5 +11,8 @@ namespace Travel.Business.Contracts
         void AddTransport(Journey.Transport transport, decimal IdFlights);
         int GetTypeRequest(string integrateCode);
         Journey GetJourneySearch(OperationRequest operationRequest);
+        List<Journey.Flight> GetFlightsSearch(decimal idJourney);
+       Journey.Transport GetTransportSearch(decimal idFlight);
+
     }
 }

@@ -41,7 +41,7 @@ namespace Travel.Business.Services
 
                 if (oJourney == null)
                 {
-
+                    //Ejecuta consulta API
                     CommandResponse commandResponse = GetFlight(routeType);
 
                     if (commandResponse != null && commandResponse.Count > 0)
@@ -119,6 +119,21 @@ namespace Travel.Business.Services
                 }
                 else
                 {
+                    var oJourneySearch = _flightBDRepository.GetFlightsSearch(oJourney.IdJourney);
+                    foreach (var itemFlights in oJourneySearch)
+                    {
+                        itemFlights.Transport = _flightBDRepository.GetTransportSearch(itemFlights.IdFlight);
+                        if (oJourney.Flights != null)
+                        {
+                            oJourney.Flights.Add(itemFlights);
+                        }
+                        else
+                        {
+                            oJourney.Flights = new List<Journey.Flight>();
+                            oJourney.Flights.Add(itemFlights);
+                        }
+                    }
+
                     return oJourney;
                 }
             }

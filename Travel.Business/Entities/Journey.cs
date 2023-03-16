@@ -7,14 +7,16 @@ namespace Travel.Business.Entities
 {
     public class Journey
     {
+        public decimal IdJourney { get; set; }
         public string Origin { get; set; }
         public string Destination { get; set; }
         public decimal Price { get; set; }
-        public int IdTypeRequest { get; set; }
+        public decimal IdTypeRequest { get; set; }
         public List<Flight> Flights { get; set; }
 
         public class Flight
         {
+            public decimal IdFlight { get; set; }
             public string Origin { get; set; }
             public string Destination { get; set; }
             public decimal Price { get; set; }
