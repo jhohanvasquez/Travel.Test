@@ -45,7 +45,7 @@ namespace Travel.DataAccess.Repositories
         public List<Journey.Flight> GetFlightsSearch(decimal idJourney)
         {
             string sqlQuery = "SELECT * FROM [dbo].[TbFlights] Flights WHERE IdJourney = @IdJourney";
-            sqlQuery = sqlQuery.Replace("IdJourney", Convert.ToString(idJourney));
+            sqlQuery = sqlQuery.Replace("@IdJourney", Convert.ToString(idJourney));
             using var connection = new SqlConnection(_settings.ConnectionString);
             var result = connection.Query<Journey.Flight>(sqlQuery, new { IdJourney = idJourney }).ToList();
             return result;
@@ -54,7 +54,7 @@ namespace Travel.DataAccess.Repositories
         public Journey.Transport GetTransportSearch(decimal idFlight)
         {
             string sqlQuery = "SELECT * FROM [dbo].[TbTransport] Transport WHERE IdFlight = @IdFlight";
-            sqlQuery = sqlQuery.Replace("IdFlight", Convert.ToString(idFlight));
+            sqlQuery = sqlQuery.Replace("@IdFlight", Convert.ToString(idFlight));
             using var connection = new SqlConnection(_settings.ConnectionString);
             var result = connection.Query<Journey.Transport>(sqlQuery, new { IdJourney = idFlight }).FirstOrDefault();
             return result;
@@ -77,7 +77,6 @@ namespace Travel.DataAccess.Repositories
 
             using (var connection = new SqlConnection(_settings.ConnectionString))
             {
-                var result = connection.ExecuteScalar(sqlInsertBase, commandTimeout: 120);
                 return (decimal)connection.ExecuteScalar(sqlInsertBase, commandTimeout: 120);
             }
         }
