@@ -5,7 +5,7 @@ La empresa NEWSHORE AIR necesita una solución para poder conectar viajes a trav
 * C#
 * Arquitectura en Capas
 * Swagger v1
-* Azure
+* Azure (Base de Datos - Log)
 * Dapper
 * Cache (Microsoft.Extensions.Caching.Memory)
 
